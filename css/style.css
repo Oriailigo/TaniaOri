@@ -1,0 +1,249 @@
+:root {
+    --blanco: #fffffF;
+    --oscuro: #000000;
+    --primario: #fde400;
+    --azul: #0F5085;
+    --gris: #8d8787;
+    --grisClaro: #dfdfdf;
+}
+
+
+/* paleta de colores*/
+
+Html {
+    font-size: 62.5%;
+    /* que todos tengan esta caja*/
+    box-sizing: border-box;
+}
+
+
+/* //////////////////////////////*/
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* //////////////////////////////*/
+
+
+/*Global*/
+
+Body {
+    font-size: 16px;
+    /*1rem=10px */
+    font-family: 'Krub', sans-serif;
+    /*quiero que toda la pagina tenga la misma fuente de letra*/
+    /*color de fondo*/
+    /*background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);  */
+    background-image: url(../image/fondo1.jpg);
+    background-repeat: no-repeat;
+    /*repeat: Que no se repita imagen de fondo */
+    background-size: cover;
+    /* size: quiero que ocupe toda la pantalla la imagen de fondo */
+    /*height y padin: Acomodar mejor la imagen engordar */
+    /*height: 410px;*/
+    /*elimino el padin para oscurecer la imagen*/
+}
+
+
+/*sombra en la pagina*/
+
+.sombra {
+    -webkit-box-shadow: 0px 7px 18px 4px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 7px 18px 4px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 7px 18px 4px rgba(0, 0, 0, 0.38);
+}
+
+
+/*html y body le cambie el tamaño para poder usar rem */
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    font-family: serif;
+    /* width: 94%; */
+    font-size: 1.4em;
+    line-height: 1.6em;
+    margin-bottom: 0.725em;
+    margin: 20px 30px 20px 30px
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.contenedor {
+    /* Voy a centrar todos los elementos de la pagina */
+    max-width: 120rem;
+    /* margen como un reloj
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    */
+    margin: 0 auto 0 auto;
+    /* alinear central y verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.contenedorN {
+    /* Voy a centrar todos los elementos de la pagina */
+    max-width: 120rem;
+    /* margen como un reloj
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    */
+    margin: 0 auto 0 auto;
+    /* alinear central y verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+}
+
+.nav-background {
+    background-color: var(--azul);
+}
+
+.navegacion-principal {
+    /*flex y justyfy =separo los elementos de la misma fila*/
+    display: flex;
+    /* le agrego flex direcion en column 
+    para que se relacione con el media query */
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* responsive uso de media querys*/
+
+
+/* Cambia si es de <=768px es lo contrario a lo
+que se piensa*/
+
+@media (min-width:768px) {
+    .navegacion-principal {
+        /*cambio el flex*/
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+    /* font-weigh puede tener estos valores: 400 y 700 */
+    text-decoration: none;
+    /* decoration: Elimino las lineas de los enlaces*/
+    padding: 1rem;
+}
+
+
+/*hover le da efecto al enlace */
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
+/* Cambia si es de 768px en adelante*/
+
+@media (min-width:768px) {}
+
+
+/*colocamos la imagen de fondo */
+
+.hero {
+    background-image: url(../image/planta1.png);
+    background-repeat: no-repeat;
+    /*repeat: Que no se repita imagen de fondo */
+    background-size: cover;
+    /* size: quiero que ocupe toda la pantalla la imagen de fondo */
+    /*height y padin: Acomodar mejor la imagen engordar */
+    height: 400px;
+    width: 400px;
+    /*padding: 20px;   elimino el padin para oscurecer la imagen*/
+    /*el padre es relativo */
+    position: relative;
+}
+
+.contenido-hero {
+    /*el hijo es absoluto */
+    position: absolute;
+    /*colocando color y tamaño */
+    background-color: rgba(0, 0, 0, .8);
+    height: 400px;
+    width: 400px;
+    /* centrar en el centro de la imagen con estos 4 lineas */
+    /* alinear central y verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2 {
+    color: var(--blanco);
+}
+
+.contenido-hero p2 {
+    color: var(--blanco);
+}
+
+.boton {
+    /*Forma del boton*/
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 1rem;
+    /*agrandar letra*/
+    font-size: 2rem;
+    /*sacar subrayado*/
+    text-decoration: none;
+    /* colocar negrita*/
+    font-weight: bolder;
+    /*hacer medio redondo*/
+    border-radius: .5rem;
+    /*estirar y centrar texto*/
+    width: 90%;
+    text-align: center;
+}
+
+
+/* Cambia si es de 768px en adelante*/
+
+@media (min-width:768px) {
+    .boton {
+        width: auto;
+    }
+}

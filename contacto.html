@@ -1,0 +1,136 @@
+<!--
+    Nota de atajo:
+    ! =para crear completo el cuerpo de la pagina
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hoja de estilos Nota: las librerias deben escribirse primero-->
+    <!--Fuentes de texto: google fonts-->
+    <link rel="preload" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Mis css-->
+    <link rel="preload" href="css/style.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Esto es lo que ve el navegador-->
+    <title>Diseñador Freelancers
+    </title>
+
+</head>
+
+<body>
+    <!-- Esto es lo que ve el usuario-->
+    <!-- La colocacion de los h1 hasta h6 es para que el navegador sepa que apartir del h1 es el mas importante-->
+    <!-- No repites H1, los demas si se pueden repetir-->
+    <header>
+        <h1 class="titulo">
+            ¡Hola Bienvenido! <span> </span>
+        </h1>
+    </header>
+    <!--Colocar el menu de navegacion donde dentro de la
+    etiqueta a se coloca el atributo de href-->
+    <div class="nav-background">
+        <nav class="navegacion-principal contenedor">
+            <!--Para no hacer referencia a nada coloc href="#"-->
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Sobre nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="contacto.html">Contacto</a>
+
+            <!-- <img src="/image/hero.jpg"> 
+        Es mejor tener una imagen como fondo para poder colocar texto encima
+        -->
+        </nav>
+    </div>
+    <!--Nuevo contenido descripcion de lo que vas a ver en la pagina el objetivo-->
+
+
+    <!--El main (el main actua como un section) es mas importante que el section por eso no se 
+coloca un section al h2. Nota: Siempre que se cambie de nuemro de h se
+coloca una section de por medio-->
+    <!--Nota: Solo hay un unico main-->
+    <!--Hay varios section para cada h-->
+    <main class="contenedor sombra contenedorN">
+
+        <!--Para el h3 si se necesita un section-->
+        <section>
+            <h2>Contacto</h2>
+            <h3>Por cotizaciones, presupuestos, consultas llená el formulario con tus datos y nos comunicaremos a la brevedad.</h3>
+            <form>
+                <fieldset>
+                    <legend>
+
+                    </legend>
+                    <div>
+                        <label>
+                            Nombre
+                        </label>
+                        <input type="text" placeholder="Escribe tu nombre">
+                    </div>
+                    <div>
+                        <label>
+                            Teléfono
+                        </label>
+                        <input type="tel" placeholder="Escribe tu teléfono">
+                    </div>
+                    <div>
+                        <label>
+                            Correo 
+                        </label>
+                        <input type="email" placeholder="Escribe tu correo">
+                    </div>
+                    <div>
+                        <label>
+                            Mensaje 
+                        </label>
+                        <textarea>
+        
+                        </textarea>
+
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <h2>Redes sociales</h2>
+        <!--Para el h3 si se necesita un section-->
+        <section>
+
+            <h3>Diseño web</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="40" height="40" viewBox="0 0 24 24" stroke-width="2.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                <circle cx="7.5" cy="10.5" r=".5" fill="currentColor" />
+                <circle cx="12" cy="7.5" r=".5" fill="currentColor" />
+                <circle cx="16.5" cy="10.5" r=".5" fill="currentColor" />
+              </svg>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+            </p>
+        </section>
+
+
+    </main>
+    <!--Para contacto se agrega un formulacion entonces estara fuera del main
+Y se le agregara una section porque es un h2-->
+    <!--Colocar un gvg vectorial-->
+
+    |
+    <footer>
+        <p>Todos los derechos reservados. Oriana Ailigo</p>
+    </footer>
+
+
+</body>
+
+</html>
